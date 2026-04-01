@@ -6,5 +6,7 @@ class Member(models.Model):
     lastName = models.CharField(max_length= 100)
     phone = models.IntegerField(null=True)
     joined_date = models.DateField(null=True)
-    
+
+    # def __str__(self):
+        # return f"{self.firstName} {self.lastName}"
     
