@@ -26,6 +26,6 @@ def details(request, id):
 def testing(request):
   template = loader.get_template('template.html')
   context = {
-    'fruits': ['Apple', 'Banana', 'Cherry'],   
+    'hisName': 'Linus'   
   }
   return HttpResponse(template.render(context, request))
