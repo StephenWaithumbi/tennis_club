@@ -14,5 +14,14 @@
 
     <p>Hello {{hisName}}</p>.
 
+    {%if greetings == 1 and day == 'friday'%}
+        <h3>Good morning</h3>
+    {%elif greetings == 2 %}
+        <h3>Good afternoon</h3>
+    {%else%}
+        <h3>Good evening</h3>
+    {% endif %}
+
+        
 </body>
 </html>
