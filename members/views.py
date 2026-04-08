@@ -24,9 +24,11 @@ def details(request, id):
     return HttpResponse(template.render(context, request))
 
 def testing(request):
-  template = loader.get_template('template.html')
-  context = {
-    'greetings': 1,
-    'day' : 'fridays'
-  }
-  return HttpResponse(template.render(context, request))
+    my_member = Member.objects.filter(firstName='emily').values()
+    template = loader.get_template('template.html')
+    context = {
+        'mymembers': my_member
+    }
+
+    return HttpResponse(template.render(context, request))
+  
